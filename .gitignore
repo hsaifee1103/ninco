@@ -3,6 +3,8 @@
 /public/storage
 /storage/*.key
 /vendor
+/old_root
+/old_web
 .DS_Store
 Thumbs.db
 /bower_components
