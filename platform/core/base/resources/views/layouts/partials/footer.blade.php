@@ -24,27 +24,27 @@
 </div>
  <script>
     // Hide menus by ID
-    function hideMenusByIds() {
-      var idsToHide = ["cms-plugins-gallery", 
-      "cms-plugins-team",
-      "cms-plugins-location",
-      "cms-plugins-ads",
-      "cms-plugins-newsletter",
-      "cms-core-appearance",
-      "cms-core-plugins",
-      "cms-plugin-translation",
-      "cms-core-platform-administration",
-      "cms-plugins-team",
-      "cms-plugins-location"
-      ];
+    // function hideMenusByIds() {
+    //   var idsToHide = ["cms-plugins-gallery", 
+    //   "cms-plugins-team",
+    //   "cms-plugins-location",
+    //   "cms-plugins-ads",
+    //   "cms-plugins-newsletter",
+    //   "cms-core-appearance",
+    //   "cms-core-plugins",
+    //   "cms-plugin-translation",
+    //   "cms-core-platform-administration",
+    //   "cms-plugins-team",
+    //   "cms-plugins-location"
+    //   ];
 
-      idsToHide.forEach(function(id) {
-        var element = document.getElementById(id);
-        if (element) {
-          element.style.display = 'none';
-        }
-      });
-    }
+    //   idsToHide.forEach(function(id) {
+    //     var element = document.getElementById(id);
+    //     if (element) {
+    //       element.style.display = 'none';
+    //     }
+    //   });
+    // }
 
     // Call the function to hide menus when the page loads
     window.onload = hideMenusByIds;
