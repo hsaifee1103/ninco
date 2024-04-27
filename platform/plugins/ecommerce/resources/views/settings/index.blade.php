@@ -106,7 +106,7 @@
             />
         </x-core-setting::section>
 
-        <x-core-setting::section
+        {{-- <x-core-setting::section
             :title="trans('plugins/ecommerce::ecommerce.standard_and_format')"
             :description="trans('plugins/ecommerce::ecommerce.standard_and_format_description')"
         >
@@ -176,9 +176,10 @@
                     />
                 </div>
             </div>
-        </x-core-setting::section>
+        </x-core-setting::section> --}}
 
-        <x-core-setting::section
+        {{-- <x-core-setting::section
+
             :title="trans('plugins/ecommerce::currency.currencies')"
             :description="trans('plugins/ecommerce::currency.setting_description')"
         >
@@ -357,7 +358,7 @@
                     {{ trans('plugins/ecommerce::currency.new_currency') }}
                 </a>
             </div>
-        </x-core-setting::section>
+        </x-core-setting::section> --}}
 
         <x-core-setting::section
             :title="trans('plugins/ecommerce::ecommerce.setting.store_locator_title')"

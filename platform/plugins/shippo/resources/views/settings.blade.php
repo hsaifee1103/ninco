@@ -8,7 +8,7 @@
     $webhook = setting('shipping_shippo_webhooks', 1) ?: 0;
 @endphp
 
-<table class="table mt-4 bg-white">
+{{-- <table class="table mt-4 bg-white">
     <tbody>
         <tr class="border-pay-row">
             <td class="border-pay-col">
@@ -261,4 +261,4 @@
             </td>
         </tr>
     </tbody>
-</table>
+</table> --}}

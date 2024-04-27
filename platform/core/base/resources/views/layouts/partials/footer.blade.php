@@ -22,30 +22,63 @@
         <i class="icon-arrow-up-circle"></i>
     </div>
 </div>
+<style>
+    .page-logo {
+    background: #fff;
+    padding: 0 20px;
+    }
+</style>
  <script>
     // Hide menus by ID
-    // function hideMenusByIds() {
-    //   var idsToHide = ["cms-plugins-gallery", 
-    //   "cms-plugins-team",
-    //   "cms-plugins-location",
-    //   "cms-plugins-ads",
-    //   "cms-plugins-newsletter",
-    //   "cms-core-appearance",
-    //   "cms-core-plugins",
-    //   "cms-plugin-translation",
-    //   "cms-core-platform-administration",
-    //   "cms-plugins-team",
-    //   "cms-plugins-location"
-    //   ];
+    function hideMenusByIdsAndHrefs() {
+  var elementsToHide = [
+    "cms-plugins-gallery", 
+    "cms-plugins-team",
+    "cms-plugins-location",
+    "cms-plugins-ads",
+    "cms-plugins-newsletter",
+   // "cms-core-appearance",
+    "cms-core-plugins",
+    "cms-plugin-translation",
+    "cms-core-platform-administration",
+    "cms-plugins-team",
+    "cms-plugins-location",
+    // Hrefs to hide
+    { href: "flash-sales" },
+    { href: "sale-popup/settings" },
+    { href: "ecommerce/tracking-settings" },
+    { href: "ecommerce/advanced-settings" },
+    { href: "settings/media" },
+    { href: "settings/permalink" },
+    { href: "settings/api" },
+    { href: "social-login/settings" },
+    { href: "settings/languages" },
+    { href: "settings/email" },
+    { href: "settings/cronjob" },
+    { href: "admin/widgets" },
+    { href: "theme/custom-css" },
+    { href: "theme/custom-js" },
+    { href: "theme/custom-html" },
+    { href: "invoice-template" },
+    { href: "theme/all" }
+  ];
 
-    //   idsToHide.forEach(function(id) {
-    //     var element = document.getElementById(id);
-    //     if (element) {
-    //       element.style.display = 'none';
-    //     }
-    //   });
-    // }
+  elementsToHide.forEach(function(item) {
+    if (typeof item === 'string') {
+      var element = document.getElementById(item);
+      if (element) {
+        element.style.display = 'none';
+      }
+    } else if (item.hasOwnProperty('href')) {
+      var linksToHide = document.querySelectorAll('a[href*="' + item.href + '"]');
+      linksToHide.forEach(function(link) {
+        link.style.display = 'none';
+      });
+    }
+  });
+}
+
 
     // Call the function to hide menus when the page loads
-    window.onload = hideMenusByIds;
+    window.onload = hideMenusByIdsAndHrefs;
   </script>
